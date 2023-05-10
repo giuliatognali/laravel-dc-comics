@@ -16,8 +16,10 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $comic = Comic::all();
-        dd($comic);
+        $comics = Comic::all();
+
+        //index riceve array comics
+        return view('comic.index', compact('comics'));
     }
 
     /**
@@ -47,10 +49,11 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $comic)
     {
-        //
+        return view('comic.show', compact('comic'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
