@@ -23,12 +23,12 @@ class ComicsTableSeeder extends Seeder
             $newComic->title = $comic["title"];
             $newComic->description = $comic["description"];
             $newComic->thumb =  $comic["thumb"];
-/*             $newComic->price =  $comic["price"];
+            $newComic->price =  $comic["price"];
             $newComic->series =  $comic["series"];
             $newComic->sale_date =  $comic["sale_date"];
-            $newComic->type = $comic["type"]; */
-            //$newComic->artists =  $comic["artists"];
-            //$newComic->writers =  $comic["writers"];
+            $newComic->type = $comic["type"];
+            $newComic->artists = implode(", ", $comic["artists"]);
+            $newComic->writers =  implode(", ", $comic["writers"]);
 
             $newComic->save();
         }

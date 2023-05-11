@@ -15,6 +15,9 @@
         <p>{{$comic->series}}</p>
         <p>{{$comic->sale_date}}</p>
         <p>{{$comic->type}}</p>
+        <p>{{$comic->artists}}</p>
+        <p>{{$comic->writers}}</p>
+
     <div>
         <a href="{{route('comics.index')}}"><button class="btn btn-primary">Torna all'elenco comics</button></a>
     </div>
