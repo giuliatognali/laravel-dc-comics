@@ -19,7 +19,9 @@
         <p>{{$comic->writers}}</p>
 
     <div>
-        <a href="{{route('comics.index')}}"><button class="btn btn-primary">Torna all'elenco comics</button></a>
+        <a href="{{route('comics.index', $comic)}}"><button class="btn btn-primary">Torna all'elenco comics</button></a>
+        <a href="{{route('comics.edit', $comic)}}"><button class="btn btn-warning">Modifica i dettagli</button></a>
+
     </div>
 </div>
 @endsection

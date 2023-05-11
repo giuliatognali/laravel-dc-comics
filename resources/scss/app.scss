@@ -1,5 +1,11 @@
 @import "~bootstrap/scss/bootstrap";
 
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+}
+
 .card{
     height: 100%;
     img {
