@@ -9,20 +9,21 @@
 
 @section('page.main')
     <div class="container pt-3">
-        <a href="{{route('comics.create')}}" class="btn btn-info">Inserisci un nuovo fumetto</a>
+        <a href="{{ route('comics.create') }}" class="btn btn-success mb-3">Inserisci un nuovo fumetto</a>
 
         <div class="row">
-            @foreach ($comics as $comic)
-                <div class="card col-2 p-2 m-2">
-                    <h6>{{ $comic->title }}</h6>
-                    <div class="img">
-                        <a href="{{route('comics.show', $comic->id)}}">
-                            <img src="{{ $comic->thumb }}">
-                        </a>
-
+            <div class="card-comic">
+                @foreach ($comics as $comic)
+                    <div class="card col-2 m-2">
+                        <h6>{{ $comic->title }}</h6>
+                        <div class="img">
+                            <a href="{{ route('comics.show', $comic->id) }}">
+                                <img src="{{ $comic->thumb }}">
+                            </a>
+                        </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            </div>
         </div>
     </div>
 @endsection

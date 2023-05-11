@@ -20,7 +20,12 @@
         @yield('page.main')
 
     </main>
-    <footer></footer>
+    <footer>
+        <div class="container "> 
+            <p>Create from Class 89</p>
+        </div>
+        
+    </footer>
 </body>
 
 </html>
